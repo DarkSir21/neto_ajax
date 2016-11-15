@@ -1,0 +1,101 @@
+
+*:focus {
+  outline: none;
+}
+
+form,
+.user-info {
+  position: relative;
+  display: block;
+  margin: 80px auto 0;
+  max-width: 15em;
+  font-size: 1.875rem;
+  font-family: sans-serif;
+}
+
+form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5em;
+}
+
+form input,
+button {
+  border: none;
+  transition: box-shadow .3s
+}
+
+form input {
+  padding: 1rem;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.3);
+}
+
+form input:focus {
+  box-shadow: 0 0 0 1px rgba(0,0,0,.3), 0 3px 6px rgba(0,0,0,.3)
+}
+
+button {
+  border-radius: 3px;
+  padding: .675rem 1.25rem;
+  background: seagreen;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  box-shadow: 0 3px 6px rgba(0,0,0,.3);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background: gray;
+  box-shadow: none;
+}
+
+.user-info {
+  display: none;
+}
+
+.btn-wrapper {
+  text-align: right;
+}
+
+.preloader {
+  display: none;
+}
+
+.preloader::before {
+  content: '';
+  position: absolute;
+  left: calc(50% - 30px);
+  bottom: -30px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 7px solid seagreen;
+  border-right-color: transparent;
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotateZ(-360deg) }
+}
+
+.error {
+  color: crimson;
+}
+
+.user-info-wrapper span {
+  display: block;
+}
+
+.user-image-wrapper {
+  margin-right: 10px
+}
+
+.flex-wrapper {
+    display: flex;
+}
